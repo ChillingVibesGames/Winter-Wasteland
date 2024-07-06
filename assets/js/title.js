@@ -1,9 +1,9 @@
 document.getElementById('start').onclick = function () {
-    let visible = document.querySelector('#textbox')
     console.log('clicked!')
-    start = 1;
     document.querySelector('#start').hidden = true;
     document.querySelector('#title-center').hidden = true;
+    start = 1;
+    let visible = document.querySelector('#textbox')
     visible.hidden = false;
     music(0);
 };
@@ -23,5 +23,3 @@ function animate () {
 let x = 0;
 let sin = 0;
 let start = 0;
-
-//setInterval(animate, 50);

@@ -5,6 +5,21 @@
     <title>Winter Wasteland Demo</title>
     <link rel="icon" href="assets/favicon.ico">
     <style>
+        #textbox{
+            background-color:#000000; 
+            opacity: 0.75; 
+            width: 99.7vw; 
+            height:25vh; 
+            border:#ffffff; 
+            border-style:solid; 
+            position:fixed; 
+            bottom:1px; 
+            color:#ffffff;
+            left: 50%;
+            z-index: 10;
+            transform: translate(-50%);
+        }
+
         #body {
             z-index: 3;
             height: 100vh;
@@ -191,14 +206,36 @@
     <div id="body">
     </div>
     <div id="mainTitle">
-        <h1 class="title">Winter Wasteland</h1>
-        <button onclick="this.hidden = true; document.querySelector('#mainTitle').hidden = true;" oncousedown="buttonAudio('select')" onmouseenter="buttonAudio('hover')"
+        <center><h1 class="title">Winter Wasteland</h1></center>
+        <button onclick="this.hidden = true; document.querySelector('#mainTitle').hidden = true; startGame();" onmousedown="buttonAudio('select')" onmouseenter="buttonAudio('hover');"
             class="play MenuButtons">Play</button>
         <button onmousedown="buttonAudio('select')" onmouseenter="buttonAudio('hover')" class="options MenuButtons">More
             options soon to come!</button>
     </div>
     <div id="textSystem">
-
+        <h1 id="prompt" hidden="true"></h1>
+        <div id="textbox" hidden class="textbox">
+            <p id="dialogue" style="position: absolute; top: 0px; left: .5vw; font-family: 'Arial', sans-serif;"></p>
+        </div>
+        <img id="icon" style="position: fixed; left: 0px; bottom: 25.5vh; z-index: 0;" src="" height="400px" hidden>
+        <p id="dialogue-1" voice="" start="1" hide hidden>One day, you were messing around a bit and got in some trouble with your parents.</p>
+        <p id="dialogue-2" voice="" hide hidden>They didn't take kindly to your hobbies, and often hit and slap you for it.</p>
+        <p id="dialogue-3" voice="" hide hidden>So, in spite of your parents you ran away.</p>
+        <p id="dialogue-4" voice="" hide hidden>As a 12 year old, unknowing of what the outside world had to offer you didn't know how to survive.</p>
+        <p id="dialogue-5" voice="" hide hidden>One day, during the winter it was freezing outside and you fell unconscious...</p>
+        <p id="dialogue-6" voice="" hide hidden>and awoke in a whole new world...</p>
+        <p id="dialogue-7" voice="" hide hidden>a winter wasteland.</p>
+        <p id="dialogue-8" voice="" hide hidden>you kept walking for hours until you found a forest with a ruined tower-like structure.</p>
+        <p id="dialogue-9" voice="" hide hidden>This is your new home...</p>
+        <p id="dialogue-10" voice="" hide hidden>in your new world...</p>
+        <p id="dialogue-11" voice="1" hide hidden>Damn, where am I?</p>
+        <p id="dialogue-12" voice="1" hidden>Look at dis goofy-ahh tower.</p>
+        <p id="dialogue-13" voice="7" hide hidden>Dontcha' know how to great a new friend? Turn around and shake my hand.</p>
+        <p id="dialogue-14" voice="" options="2" hidden>Shake their hand?/Yes/No</p>
+        <p id="dialogue-15" voice="7" choice="1" hidden>Heya kiddo! The name's Sans, Sans the skeleton.</p>
+        <p id="dialogue-16" voice="7" choice="2" hidden>C'mon, I'm just messin' with ya!</p>
+        <p id="dialogue-17" voice="6" choice="2" hidden>Don't leave me out! </p>
+        <p id="dialogue-18" voice="6" choice="2" hidden>I wanna join y'all!</p>
     </div>
     <script src="assets/main.js"></script>
     <div class="module" id="module"></div>
