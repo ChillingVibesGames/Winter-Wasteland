@@ -9,14 +9,17 @@
 </head>
 
 <body>
+    <div id="pressKey" onclick="this.hidden = true"><center><h1 class="keyChild">Click to Start!</h1></center></div>
     <div id="body">
     </div>
     <div id="mainTitle">
         <h1 class="title">Winter Wasteland</h1>
-        <button class="options MenuButtons">Options</button>
-        <button class="play MenuButtons">Play</button>
-        <script src="assets/main.js"></script>
-    </div>
+        <button onmousedown="buttonAudio('select')" onmouseenter="buttonAudio('hover')"
+            class="play MenuButtons">Play</button>
+        <button onmousedown="buttonAudio('select')" onmouseenter="buttonAudio('hover')" class="options MenuButtons">More
+            options soon to come!</button>
+            <script src="assets/main.js"></script>
+        </div>
     <div class="module" id="module"></div>
     <script>
         const el = document.querySelector("#module");

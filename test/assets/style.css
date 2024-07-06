@@ -1,5 +1,19 @@
+button{
+    opacity: .7;
+    z-index: 5;
+}
+
+button:active{
+    background: #797979;
+}
+
+button:hover{
+    opacity: .8;
+}
+
 html {
     background-color: #f0f0f0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .title {
@@ -16,6 +30,7 @@ html {
     -webkit-animation-delay: 2s;
     animation: slideTop 0.75s forwards;
     animation-delay: 0s;
+    opacity: .6;
 }
 .MenuButtons{
     width:50%;
