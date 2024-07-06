@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Winter Wasteland Demo</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/background.css">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+
+<body>
+    <div id="body">
+    </div>
+    <div id="mainTitle">
+        <h1 class="title">Winter Wasteland</h1>
+        <button class="options MenuButtons">Options</button>
+        <button class="play MenuButtons">Play</button>
+        <script src="assets/main.js"></script>
+    </div>
+    <div class="module" id="module"></div>
+    <script>
+        const el = document.querySelector("#module");
+
+        document.querySelector('#body').addEventListener("mousemove", (e) => {
+            el.style.backgroundPositionX = (-e.offsetX / 4) + "px";
+            el.style.backgroundPositionY = (-e.offsetY / 3) + "px";
+        });
+    </script>
+</body>
+
+</html>

@@ -7,6 +7,7 @@ document.getElementById('start').onclick = function () {
     visible.hidden = false;
     music(0);
 };
+
 function animate () {
     let title = document.querySelector('#title-center');
     let button = document.querySelector('#start');
