@@ -183,7 +183,7 @@
 </head>
 
 <body>
-    <div id="pressKey" onclick="this.hidden = true">
+    <div id="pressKey" onclick="this.hidden = true; music(1);">
         <center>
             <h1 class="keyChild">Click to Start!</h1>
         </center>
@@ -192,12 +192,15 @@
     </div>
     <div id="mainTitle">
         <h1 class="title">Winter Wasteland</h1>
-        <button onmousedown="buttonAudio('select')" onmouseenter="buttonAudio('hover')"
+        <button onclick="this.hidden = true; document.querySelector('#mainTitle').hidden = true;" oncousedown="buttonAudio('select')" onmouseenter="buttonAudio('hover')"
             class="play MenuButtons">Play</button>
         <button onmousedown="buttonAudio('select')" onmouseenter="buttonAudio('hover')" class="options MenuButtons">More
             options soon to come!</button>
-        <script src="assets/main.js"></script>
     </div>
+    <div id="textSystem">
+
+    </div>
+    <script src="assets/main.js"></script>
     <div class="module" id="module"></div>
     <script>
         const el = document.querySelector("#module");
